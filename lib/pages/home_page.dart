@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
           return Center(
             child: CupertinoActivityIndicator(
               radius: 20,
-              color: Color.fromARGB(255, 172, 216, 247),
+              color: Colors.blueAccent,
             ),
           );
         }

@@ -28,14 +28,8 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.4), BlendMode.darken),
-              filterQuality: FilterQuality.high,
-              image: AssetImage("assets/images/backG.jpg"),
-              fit: BoxFit.cover,
-            ),
+          decoration: new BoxDecoration(
+              color: Colors.black
           ),
           width: w,
           height: h,
@@ -44,7 +38,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
 
   FutureBuilder<void> loadedData() {
     return FutureBuilder(

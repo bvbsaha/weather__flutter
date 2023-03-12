@@ -12,14 +12,13 @@ Widget currentWeather({
 }) {
   return Container(
     width: w,
-
     child: Container(
       child: Row(
         children: [
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text("${temp}°", style: kTempFont),
               Row(
                 children: [
                   Text("$location, $country", style: kTitleFont),
@@ -33,23 +32,13 @@ Widget currentWeather({
                       )),
                 ],
               ),
-              Text("${temp}°", style: kTempFont),
+              Row(
+                children: [
+                  Text("$status",style: kTitleFont,),
+                  SizedBox(width: 10,),
+                ],
+              )
             ],
-          ),
-          Expanded(child: Container()),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            width: w / 13,
-            height: h / 5,
-            child: RotatedBox(
-              quarterTurns: -1,
-              child: Center(
-                child: Text(
-                  status!,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-            ),
           ),
         ],
       ),

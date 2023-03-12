@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 const kTextColor1 = Color.fromARGB(255, 255, 255, 255);
 const kTextColor2 = Color.fromARGB(241, 212, 212, 212);
 
-//
 
 TextStyle kTitleFont = TextStyle(
   fontSize: 30,
@@ -23,7 +22,6 @@ TextStyle kMoreInfoFont = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
-//
 
 final w = Get.width;
 final h = Get.height;

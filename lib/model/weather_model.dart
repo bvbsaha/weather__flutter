@@ -6,7 +6,7 @@ class WeatherModel {
   double? feelsLike;
   String? status;
   String? country;
-  //
+
   WeatherModel({
     required this.cityName,
     required this.temp,
@@ -16,8 +16,6 @@ class WeatherModel {
     required this.status,
     required this.country,
   });
-
-  //
 
   WeatherModel.fromJson(Map<String, dynamic> json) {
     cityName = json["name"] as String?;

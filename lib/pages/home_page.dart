@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//
 import '../utils/constanst.dart';
 import '../model/weather_model.dart';
 import '../services/weather_api_client.dart';

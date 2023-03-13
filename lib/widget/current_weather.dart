@@ -9,6 +9,7 @@ Widget currentWeather({
   required String? location,
   required String? country,
   required String? status,
+  required String? description,
 }) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(15),
@@ -17,17 +18,18 @@ Widget currentWeather({
         child: Container(
           width: w,
           decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.1),
+          color: Colors.white.withOpacity(0.5),
           borderRadius: BorderRadius.circular(15),
-          border: Border.all(color: Colors.white, width: 1.9)),
+          border: Border.all(color: Colors.white, width: 2.9)),
              child: Container(
-               padding: EdgeInsets.symmetric(vertical: 150,horizontal: 62),
+               padding: EdgeInsets.symmetric(vertical: 150,horizontal: 40),
                  child: Row(
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text("${temp}°", style: kTempFont),
+                            Text("${temp}°C", style: kTempFont),
+
                             Row(
                               children: [
                                 Text("$location, $country", style: kTitleFont),
@@ -36,7 +38,7 @@ Widget currentWeather({
                                     onPressed: onPressed,
                                     icon: Icon(
                                       CupertinoIcons.refresh,
-                                      color: Colors.white,
+                                      color: Colors.blueAccent,
                                       size: 30,
                                     )),
                               ],
@@ -46,7 +48,12 @@ Widget currentWeather({
                                 Text("$status",style: kTitleFont,),
                                 SizedBox(width: 10,),
                               ],
-                            )
+                            ),
+                            Row(
+                                children: [
+                                  Text("$description",style: kMoreInfoFont,),
+                                  SizedBox(width: 10,),
+                                ]),
                           ],
                         ),
                       ],

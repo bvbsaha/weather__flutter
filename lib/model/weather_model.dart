@@ -6,6 +6,7 @@ class WeatherModel {
   double? feelsLike;
   String? status;
   String? country;
+  String? description;
 
   WeatherModel({
     required this.cityName,
@@ -15,6 +16,7 @@ class WeatherModel {
     required this.feelsLike,
     required this.status,
     required this.country,
+    required this.description
   });
 
   WeatherModel.fromJson(Map<String, dynamic> json) {
@@ -25,5 +27,6 @@ class WeatherModel {
     feelsLike = json["main"]["feels_like"]as double?;
     status = json["weather"][0]["main"]as String?;
     country = json["sys"]["country"]as String?;
+    description = json["weather"][0]["description"]as String?;
   }
 }

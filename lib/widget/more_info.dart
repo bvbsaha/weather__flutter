@@ -15,25 +15,25 @@ Widget moreInfo({
         width: w,
         height: h / 12,
         decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.1),
+            color: Colors.white.withOpacity(0.5),
             borderRadius: BorderRadius.circular(15),
-            border: Border.all(color: Colors.white, width: 1.9)),
+            border: Border.all(color: Colors.white, width: 2.9)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("Wind", style: kMoreInfoFont),
-                Text("Humidity", style: kMoreInfoFont),
-                Text("FeelsLike", style: kMoreInfoFont),
+                Text("Ветер,м/с", style: kMoreInfoFont),
+                Text("Влажность,%", style: kMoreInfoFont),
+                Text("Ощущения,°C", style: kMoreInfoFont),
               ],
             ),
             SizedBox(
               height: 5,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(wind, style: kMoreInfoFont),
                 Text(humidity, style: kMoreInfoFont),

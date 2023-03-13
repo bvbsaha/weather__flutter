@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
 
   FutureBuilder<void> loadedData() {
     return FutureBuilder(
-      // Zanjan , Toronto, Yakutsk, las vegas, miami
+
       future: getData("Minsk"),
       builder: (ctx, snp) {
         if (snp.connectionState == ConnectionState.done) {
@@ -57,11 +57,13 @@ class _HomePageState extends State<HomePage> {
                   temp: "${data!.temp}",
                   location: "${data!.cityName}",
                   status: "${data!.status}",
-                  country: "${data!.country}"),
+                  country: "${data!.country}",
+                  description: "${data!.description}",),
               moreInfo(
                   wind: "${data!.wind}",
                   humidity: "${data!.humidity}",
                   feelsLike: "${data!.feelsLike}")
+
             ],
           );
         } else if (snp.connectionState == ConnectionState.waiting) {
